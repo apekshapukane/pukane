@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FlipCard Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="flip2.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ===== HEADER / TOP BAR ===== -->
+<header class="top-header">
+  <div class="logo"><i class="fa-solid fa-bag-shopping"></i> FlipCard Store</div>
+
+<nav class="top-nav">
+  <ul>
+    <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="#makeup"><i class="fa-solid fa-eye"></i> Makeup</a></li>
+    <li><a href="#jewelry"><i class="fa-solid fa-gem"></i> Jewelry</a></li>
+    <li><a href="#"><i class="fa-solid fa-tags"></i> Offers</a></li>
+  </ul>
+</nav>
+
+<div class="search-box">
+  <input type="text" placeholder="Search for products, brands and more">
+  <button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+</div>
+
+<div class="header-btns">
+  <a href="#" class="btn login-btn"><i class="fa-solid fa-user"></i> Login</a>
+  <a href="#" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i> Cart (<span id="cart-count">0</span>)</a>
+</div>
+
+
+  <!-- Mobile menu toggle -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle Menu">☰</button>
+</header>
+
+
+<!-- ===== MAIN LAYOUT ===== -->
+<div class="main-container">
+
+  <!-- ===== SIDEBAR FILTERS ===== -->
+  <aside class="sidebar">
+    <h3>Filters</h3>
+    <ul>
+      <li><label><input type="checkbox"> Buy More, Save More</label></li>
+      <li><label><input type="checkbox"> Special Price</label></li>
+    </ul>
+
+    <h3>Discount</h3>
+    <ul>
+      <li><label><input type="checkbox"> 50% or more</label></li>
+      <li><label><input type="checkbox"> 30% or more</label></li>
+    </ul>
+
+    <h3>Availability</h3>
+    <ul>
+      <li><label><input type="checkbox"> In Stock</label></li>
+      <li><label><input type="checkbox"> Include Out of Stock</label></li>
+    </ul>
+  </aside>
+
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <section class="content">
+
+    <!-- ========== MAKEUP SECTION ========== -->
+    <h2 id="makeup">Makeup Products</h2>
+    <div class="product-grid">
+
+      <!-- Lip Serum -->
+      <article class="flip-card" data-name="ELIBLISS Lip Serum" data-price="82">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="lipserum.jpg" alt="ELIBLISS Lip Serum">
+            <p>ELIBLISS Lip Serum</p>
+          </div>
+          <div class="flip-card-back">
+            <h4>₹82 <span class="discount">₹299</span></h4>
+            <p>72% OFF | 3.9 ★</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Eyeshadow Palette -->
+      <article class="flip-card" data-name="MINARA 60 Color Palette" data-price="179">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Eyeshadow Palette.jpg" alt="MINARA 60 Color Palette">
+            <p>MINARA 60 Color Palette</p>
+          </div>
+          <div class="flip-card-back">
+            <h4>₹179 <span class="discount">₹1,299</span></h4>
+            <p>86% OFF | 4 ★</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cleansing Wipes -->
+      <article class="flip-card" data-name="Lacto Calamine Wipes" data-price="154">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Cleansing Wipes.jpg" alt="Lacto Calamine Wipes">
+            <p>Lacto Calamine Wipes</p>
+          </div>
+          <div class="flip-card-back">
+            <h4>₹154 <span class="discount">₹900</span></h4>
+            <p>82% OFF | 4.4 ★</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Brush Set -->
+      <article class="flip-card" data-name="Makeup Brush Set" data-price="109">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Brush Set.jpg" alt="Makeup Brush Set">
+            <p>Makeup Brush Set</p>
+          </div>
+          <div class="flip-card-back">
+            <h4>₹109 <span class="discount">₹199</span></h4>
+            <p>45% OFF | 4.2 ★</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mascara -->
+      <article class="flip-card" data-name="Volume Mascara" data-price="249">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Mascara.jpg" alt="Mascara">
+            <p>Volume Mascara</p>
+          </div>
+          <div class="flip-card-back">
+            <h4>₹249 <span class="discount">₹499</span></h4>
+            <p>50% OFF | 4.5 ★</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Foundation -->
+      <article class="flip-card" data-name="Matte Foundation" data-price="399">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Foundation.jpg" alt="Foundation">
+            <p>Matte Foundation</p>
+          </div>
+          <div class="flip-card-back">
+            <h4>₹399 <span class="discount">₹799</span></h4>
+            <p>50% OFF | 4.1 ★</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+
+    <!-- ========== JEWELRY SECTION ========== -->
+    <h2 id="jewelry">Jewelry Collection</h2>
+    <div class="product-grid">
+
+      <!-- Necklace -->
+      <article class="flip-card" data-name="Gold Necklace" data-price="9999">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Necklace.jpg" alt="Gold Necklace">
+            <p>Gold Necklace</p>
+          </div>
+          <div class="flip-card-back">
+            <h4>₹9,999 <span class="discount">₹12,999</span></h4>
+            <p>23% OFF | 4.8 ★</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Diamond Ring -->
+      <article class="flip-card" data-name="Diamond Ring" data-price="15999">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Diamond Ring.jpg" alt="Diamond Ring">
+            <p>Diamond Ring</p>
+          </div>
+          <div class="flip-card-back">
+            <h4>₹15,999 <span class="discount">₹19,999</span></h4>
+            <p>20% OFF | 5 ★</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bracelet -->
+      <article class="flip-card" data-name="Elegant Bracelet" data-price="2999">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Bracelet.jpg" alt="Bracelet">
+            <p>Elegant Bracelet</p>
+          </div>
+          <div class="flip-card-back">
+            <h4>₹2,999 <span class="discount">₹4,999</span></h4>
+            <p>40% OFF | 4.5 ★</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Earrings -->
+      <article class="flip-card" data-name="Pearl Earrings" data-price="799">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Earrings.jpg" alt="Pearl Earrings">
+            <p>Pearl Earrings</p>
+          </div>
+          <div class="flip-card-back">
+            <h4>₹799 <span class="discount">₹1,499</span></h4>
+            <p>47% OFF | 4.6 ★</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bangles -->
+      <article class="flip-card" data-name="Ethnic Bangles" data-price="1299">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Bangless.jpg" alt="Ethnic Bangles">
+            <p>Ethnic Bangles</p>
+          </div>
+          <div class="flip-card-back">
+            <h4>₹1,299 <span class="discount">₹2,599</span></h4>
+            <p>50% OFF | 4.3 ★</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Silver Anklet -->
+      <article class="flip-card" data-name="Silver Anklet" data-price="599">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Silver Anklet.jpg" alt="Silver Anklet">
+            <p>Silver Anklet</p>
+          </div>
+          <div class="flip-card-back">
+            <h4>₹599 <span class="discount">₹999</span></h4>
+            <p>40% OFF | 4.0 ★</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+      
+
+
+    </div>
+
+
+    <!-- ========== OFFERS SECTION ========== -->
+<h2 id="offers">Special Offers</h2>
+<div class="product-grid">
+
+  <!-- Offer 1 -->
+  <div class="flip-card">
+
+    <article class="flip-card" data-name="Elegant Bracelet" data-price="2999">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+             <img src="offer-makup.jpg" alt="Makeup Offer">
+            <p>offer-makup</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Flat 50% OFF</h3>
+          <p>On selected offer-makup.</p>
+         <a href="#makeup" class="offer-btn">Shop Now</a>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  <!-- Offer 2 -->
+
+   <div class="flip-card">
+    <article class="flip-card" data-name="Elegant Bracelet" data-price="2999">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+              <img src="offer-jewelry.jpg" alt="Jewelry Offer">
+            <p>offer-jewelry</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Buy 1 Get 1 Free</h3>
+    <p>On Jewelry Collection this week.</p>
+    <a href="#jewelry" class="offer-btn">Explore</a>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  <!-- Offer 3 -->
+
+ <div class="flip-card">
+    <article class="flip-card" data-name="offer-coupon" data-price="2999">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+             <img src="offer-coupon.jpg" alt="Coupon Offer">
+            <p>offer-coupon</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Buy 1 Get 1 Free</h3>
+     <h3>Extra ₹100 OFF</h3>
+    <p>Use Code: <strong>FLIP100</strong></p>
+    <a href="#" class="offer-btn">Apply Now</a>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    </div>
+</div>
+  </section>
+</div>
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>&copy; 2025 FlipCard Store | All Rights Reserved</p>
+</footer>
+
+
+<!-- ===== JS: CART + MOBILE MENU ===== -->
+<script>
+  // Cart counter
+  let cartCount = 0;
+  const cartDisplay = document.getElementById('cart-count');
+  const addButtons = document.querySelectorAll('.add-btn');
+
+  addButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      cartCount++;
+      cartDisplay.textContent = cartCount;
+      // Simple feedback (replace with toast in real app)
+      alert('Item added to cart!');
+    });
+  });
+
+  // Mobile nav toggle
+  const hamburger = document.getElementById('hamburger');
+  const topNav = document.querySelector('.top-nav');
+  const headerBtns = document.querySelector('.header-btns');
+  const searchBox = document.querySelector('.search-box');
+
+  hamburger.addEventListener('click', () => {
+    topNav.classList.toggle('open');
+    headerBtns.classList.toggle('hide-on-mobile');
+    searchBox.classList.toggle('hide-on-mobile');
+  });
+</script>
+
+</body>
+</html>
